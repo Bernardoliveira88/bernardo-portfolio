@@ -1,0 +1,1249 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#0F1112">
+  <meta name="description" content="Portfólio de Bernardo Oliveira — Estudante de Engenharia da Computação, Desenvolvedor Back-End e Integração com Inteligência Artificial.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Bernardo Oliveira — Portfólio 2026">
+  <meta property="og:description" content="Construindo software para problemas reais, explorando tecnologia com curiosidade, disciplina e aprendizado contínuo.">
+  <meta property="og:image" content="assets/retrato-bernardo.webp">
+  <title>Bernardo Oliveira — Portfólio 2026</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="preload" as="image" href="assets/retrato-bernardo.webp" fetchpriority="high">
+
+  <!-- Google Fonts: Playfair Display (Serif), Plus Jakarta Sans (Sans-serif), JetBrains Mono (Monospace) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            charcoal: '#0F1112',
+            ivory: '#ECE6DB',
+            crimson: '#B82E28',
+            'crimson-hover': '#cf352e',
+            muted: '#A8A8A0',
+            'border-subtle': 'rgba(236, 230, 219, 0.12)'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          },
+          letterSpacing: {
+            widest: '.2em',
+            'super-wide': '.28em'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Reset & Custom Editorial Styling */
+    :root {
+      --bg: #0F1112;
+      --text: #ECE6DB;
+      --accent: #B82E28;
+      --muted: #A8A8A0;
+      --border: rgba(236, 230, 219, 0.12);
+    }
+
+    body {
+      background-color: #0F1112;
+      color: #ECE6DB;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      overflow-x: hidden;
+      min-height: 100vh;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Grain/Noise Texture Overlay */
+    .noise-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+      opacity: 0.038;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    }
+
+    /* Editorial Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+      height: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0F1112;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #25282a;
+      border-radius: 2px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #B82E28;
+    }
+
+    /* Active Nav Link Marker */
+    .nav-item {
+      position: relative;
+      transition: color 0.25s ease;
+    }
+    .nav-item::after {
+      content: '';
+      position: absolute;
+      bottom: -18px;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #B82E28;
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .nav-item.is-active {
+      color: #ECE6DB !important;
+    }
+    .nav-item.is-active::after {
+      transform: scaleX(1);
+    }
+
+    /* Smooth Tab Transitions */
+    .tab-section {
+      display: none;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .tab-section.is-active {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* High-contrast Monochromatic Photo treatment */
+    .portrait-editorial {
+      filter: grayscale(100%) contrast(118%) brightness(96%);
+      transition: filter 0.4s ease, transform 0.4s ease;
+    }
+    .portrait-editorial:hover {
+      filter: grayscale(100%) contrast(125%) brightness(100%);
+    }
+
+    /* Dialog backdrop */
+    dialog::backdrop {
+      background: rgba(10, 12, 13, 0.88);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+  </style>
+</head>
+<body class="selection:bg-[#B82E28] selection:text-[#ECE6DB] flex flex-col justify-between">
+  <!-- Subtle Grain Layer -->
+  <div class="noise-overlay" aria-hidden="true"></div>
+
+  <!-- Acessibilidade: Pular para o Conteúdo -->
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:px-4 focus:py-2 focus:bg-[#B82E28] focus:text-[#ECE6DB] focus:font-mono focus:text-sm">Pular para o conteúdo</a>
+
+  <!-- ========================================== -->
+  <!-- 2. HEADER FIXO / CONSISTENTE               -->
+  <!-- ========================================== -->
+  <header class="sticky top-0 z-40 bg-[#0F1112]/95 backdrop-blur-md border-b border-[#ECE6DB]/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-20 sm:h-24 flex items-center justify-between">
+      
+      <!-- Esquerda: Logo B.O. + Bernardo Oliveira -->
+      <a href="#inicio" onclick="switchTab('inicio'); return false;" class="flex items-center gap-3.5 group focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B82E28]">
+        <span class="font-serif font-black text-3xl sm:text-4xl tracking-tighter text-[#ECE6DB] group-hover:text-[#B82E28] transition-colors leading-none">
+          B.O.
+        </span>
+        <div class="flex flex-col justify-center border-l border-[#ECE6DB]/15 pl-3">
+          <span class="font-sans font-bold text-xs sm:text-sm tracking-widest text-[#ECE6DB] leading-tight">
+            BERNARDO OLIVEIRA
+          </span>
+          <span class="font-mono text-[10px] tracking-wider text-[#A8A8A0] leading-tight mt-0.5">
+            PORTFÓLIO / 2026
+          </span>
+        </div>
+      </a>
+
+      <!-- Direita: Navegação Horizontal no Desktop -->
+      <nav class="hidden md:flex items-center space-x-9" aria-label="Navegação Principal">
+        <a href="#inicio" onclick="switchTab('inicio'); return false;" data-tab="inicio" class="nav-item is-active text-sm font-medium text-[#A8A8A0] hover:text-[#ECE6DB] py-2">
+          Início
+        </a>
+        <a href="#sobre" onclick="switchTab('sobre'); return false;" data-tab="sobre" class="nav-item text-sm font-medium text-[#A8A8A0] hover:text-[#ECE6DB] py-2">
+          Sobre
+        </a>
+        <a href="#projetos" onclick="switchTab('projetos'); return false;" data-tab="projetos" class="nav-item text-sm font-medium text-[#A8A8A0] hover:text-[#ECE6DB] py-2">
+          Projetos
+        </a>
+        <a href="#contato" onclick="switchTab('contato'); return false;" data-tab="contato" class="nav-item text-sm font-medium text-[#A8A8A0] hover:text-[#ECE6DB] py-2">
+          Contato
+        </a>
+      </nav>
+
+      <!-- Botão Menu Mobile -->
+      <div class="flex md:hidden items-center gap-2">
+        <button id="mobileMenuBtn" aria-label="Abrir Menu de Navegação" aria-expanded="false" class="p-2.5 text-[#ECE6DB] hover:text-[#B82E28] focus:outline-none focus:ring-1 focus:ring-[#B82E28]">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Dropdown / Gaveta Mobile -->
+    <div id="mobileMenu" class="hidden md:hidden border-b border-[#ECE6DB]/10 bg-[#0F1112] px-6 py-4 space-y-3">
+      <a href="#inicio" onclick="switchTab('inicio'); toggleMobileMenu(false); return false;" data-tab-mobile="inicio" class="block py-2 text-sm font-medium text-[#ECE6DB] border-l-2 border-[#B82E28] pl-3">
+        Início
+      </a>
+      <a href="#sobre" onclick="switchTab('sobre'); toggleMobileMenu(false); return false;" data-tab-mobile="sobre" class="block py-2 text-sm font-medium text-[#A8A8A0] hover:text-[#ECE6DB] border-l-2 border-transparent pl-3">
+        Sobre
+      </a>
+      <a href="#projetos" onclick="switchTab('projetos'); toggleMobileMenu(false); return false;" data-tab-mobile="projetos" class="block py-2 text-sm font-medium text-[#A8A8A0] hover:text-[#ECE6DB] border-l-2 border-transparent pl-3">
+        Projetos
+      </a>
+      <a href="#contato" onclick="switchTab('contato'); toggleMobileMenu(false); return false;" data-tab-mobile="contato" class="block py-2 text-sm font-medium text-[#A8A8A0] hover:text-[#ECE6DB] border-l-2 border-transparent pl-3">
+        Contato
+      </a>
+    </div>
+  </header>
+
+  <!-- ========================================== -->
+  <!-- CONTEÚDO PRINCIPAL (ABAS / SEÇÕES)         -->
+  <!-- ========================================== -->
+  <main id="main-content" class="flex-grow flex flex-col justify-center">
+
+    <!-- ========================================== -->
+    <!-- SEÇÃO 1: INÍCIO (HERO)                     -->
+    <!-- ========================================== -->
+    <section id="section-inicio" class="tab-section is-active max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full py-10 lg:py-16">
+      
+      <!-- Grid de 2 Colunas -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+        
+        <!-- Coluna Esquerda: Conteúdo & Tipografia -->
+        <div class="lg:col-span-7 flex flex-col items-start">
+          
+          <!-- Eyebrow em vermelho caixa alta -->
+          <p class="font-mono text-xs sm:text-sm font-semibold tracking-super-wide text-[#B82E28] uppercase mb-4">
+            ESTUDANTE DE ENGENHARIA DA COMPUTAÇÃO
+          </p>
+
+          <!-- Título Principal gigante em duas linhas -->
+          <h1 class="font-sans text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-extrabold tracking-tight text-[#ECE6DB] leading-[1.02] mb-8">
+            Bernardo<br>Oliveira
+          </h1>
+
+          <!-- Bloco com barra vertical vermelha à esquerda -->
+          <div class="border-l-2 border-[#B82E28] pl-5 mb-6 space-y-1">
+            <p class="text-[#ECE6DB] font-bold text-base sm:text-lg">
+              Desenvolvedor Back-End · Integração com IA
+            </p>
+            <p class="text-[#A8A8A0] text-sm sm:text-base">
+              Bancos de dados · Arquitetura de sistemas
+            </p>
+          </div>
+
+          <!-- Parágrafo de Apresentação -->
+          <p class="text-[#A8A8A0] text-base sm:text-lg leading-relaxed max-w-xl mb-9">
+            Construindo software para problemas reais, explorando tecnologia com curiosidade, disciplina e aprendizado contínuo.
+          </p>
+
+          <!-- Botões de Ação (CTAs) -->
+          <div class="flex flex-wrap items-center gap-4 mb-10 w-full sm:w-auto">
+            <a href="#projetos" onclick="switchTab('projetos'); return false;" class="inline-flex items-center justify-center gap-3 px-7 py-3.5 bg-[#B82E28] hover:bg-[#cf352e] text-[#ECE6DB] text-xs sm:text-sm font-mono font-semibold tracking-wider uppercase transition-all duration-200 shadow-lg shadow-[#B82E28]/15 hover:shadow-[#B82E28]/30 group">
+              <span>VER PROJETOS</span>
+              <span class="group-hover:translate-x-1 transition-transform">-></span>
+            </a>
+            <a href="#sobre" onclick="switchTab('sobre'); return false;" class="inline-flex items-center justify-center px-7 py-3.5 border border-[#ECE6DB]/20 hover:border-[#ECE6DB]/50 text-[#ECE6DB] text-xs sm:text-sm font-mono font-medium tracking-wider uppercase hover:bg-white/[0.03] transition-all duration-200">
+              SOBRE MIM
+            </a>
+          </div>
+
+          <!-- Indicadores de Status -->
+          <div class="flex flex-wrap items-center gap-6 text-xs font-mono text-[#A8A8A0]">
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#B82E28]"></span>
+              <span>Feira de Santana, BA</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-[#4CAF50] shadow-[0_0_8px_rgba(76,175,80,0.6)]"></span>
+              <span class="text-[#ECE6DB]">Aberto a oportunidades</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Coluna Direita: Fotografia Editorial + Detalhe Geométrico Vermelho -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-md sm:max-w-lg lg:max-w-none">
+            
+            <!-- Bloco Vermelho Sólido Deslocado Atrás da Foto (canto inferior/direito) -->
+            <div class="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 w-4/5 h-4/5 bg-[#B82E28] -z-10" aria-hidden="true"></div>
+
+            <!-- Moldura da Foto com Borda Sutil -->
+            <div class="relative border border-[#ECE6DB]/15 bg-[#0F1112] overflow-hidden shadow-2xl">
+              <img 
+                src="assets/retrato-bernardo.webp" 
+                alt="Retrato fotográfico de Bernardo Oliveira em preto e branco" 
+                class="portrait-editorial w-full h-[430px] sm:h-[490px] lg:h-[530px] object-cover object-top"
+                width="800"
+                height="1000"
+              >
+            </div>
+
+            <!-- Ao lado direito da foto, alinhado ao topo: número 01 e palavras empilhadas -->
+            <div class="absolute -right-2 sm:-right-12 top-0 flex flex-col items-start pl-3 pointer-events-none">
+              <span class="font-mono font-bold text-sm text-[#B82E28] leading-none mb-2">01</span>
+              <div class="flex flex-col space-y-1 text-[9px] font-mono tracking-widest text-[#A8A8A0] uppercase">
+                <span>TECNOLOGIA</span>
+                <span>DISCIPLINA</span>
+                <span>CURIOSIDADE</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Barra Inferior de Pilares (3 Colunas divididas por linha vertical sutil) -->
+      <div class="mt-16 sm:mt-20 pt-8 border-t border-[#ECE6DB]/10">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-0 md:divide-x md:divide-[#ECE6DB]/10">
+          
+          <!-- Pilar 01 -->
+          <div class="md:pr-8 flex items-start gap-4">
+            <span class="font-mono font-bold text-sm text-[#B82E28] mt-0.5">01</span>
+            <div>
+              <h3 class="font-sans font-bold text-sm text-[#ECE6DB] tracking-wide uppercase mb-1">
+                BACK-END
+              </h3>
+              <p class="text-xs text-[#A8A8A0] leading-relaxed">
+                APIs, arquitetura e integração de serviços.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 02 -->
+          <div class="md:px-8 flex items-start gap-4">
+            <span class="font-mono font-bold text-sm text-[#B82E28] mt-0.5">02</span>
+            <div>
+              <h3 class="font-sans font-bold text-sm text-[#ECE6DB] tracking-wide uppercase mb-1">
+                IA APLICADA
+              </h3>
+              <p class="text-xs text-[#A8A8A0] leading-relaxed">
+                Integração de LLMs e automação de tarefas.
+              </p>
+            </div>
+          </div>
+
+          <!-- Pilar 03 -->
+          <div class="md:pl-8 flex items-start gap-4">
+            <span class="font-mono font-bold text-sm text-[#B82E28] mt-0.5">03</span>
+            <div>
+              <h3 class="font-sans font-bold text-sm text-[#ECE6DB] tracking-wide uppercase mb-1">
+                SISTEMAS
+              </h3>
+              <p class="text-xs text-[#A8A8A0] leading-relaxed">
+                Interesse em sistemas embarcados e baixo nível.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- SEÇÃO 2: SOBRE & HABILIDADES               -->
+    <!-- ========================================== -->
+    <section id="section-sobre" class="tab-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full py-10 lg:py-16">
+      
+      <!-- Parte Superior (01 / SOBRE MIM) -->
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start mb-16 lg:mb-20">
+        
+        <!-- Esquerda: Narrativa e Metadados -->
+        <div class="lg:col-span-7 space-y-6">
+          <p class="font-mono text-xs font-semibold tracking-super-wide text-[#B82E28] uppercase">
+            01 / SOBRE MIM
+          </p>
+
+          <h2 class="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#ECE6DB] leading-tight">
+            Tecnologia, disciplina e curiosidade.
+          </h2>
+
+          <div class="space-y-4 text-sm sm:text-base text-[#A8A8A0] leading-relaxed">
+            <p>
+              Sou estudante de Engenharia da Computação na UNIFAN e venho construindo experiência prática em projetos de software com aplicações reais. Meu foco atual está em desenvolvimento back-end, integração com inteligência artificial, bancos de dados e arquitetura de sistemas.
+            </p>
+            <p>
+              Também tenho interesse em cibersegurança e sistemas embarcados, e busco evoluir combinando prática, estudo autodirigido e colaboração com outras pessoas.
+            </p>
+          </div>
+
+          <!-- Mini-grid de 3 colunas abaixo de linha divisória -->
+          <div class="pt-6 border-t border-[#ECE6DB]/10 grid grid-cols-1 sm:grid-cols-3 gap-6">
+            <div>
+              <span class="block font-mono text-[10px] tracking-widest text-[#B82E28] uppercase mb-1">
+                LOCALIZAÇÃO
+              </span>
+              <span class="text-xs sm:text-sm text-[#ECE6DB] font-medium">
+                Feira de Santana, BA
+              </span>
+            </div>
+            <div>
+              <span class="block font-mono text-[10px] tracking-widest text-[#B82E28] uppercase mb-1">
+                FORMAÇÃO
+              </span>
+              <span class="text-xs sm:text-sm text-[#ECE6DB] font-medium">
+                Engenharia da Computação · UNIFAN
+              </span>
+            </div>
+            <div>
+              <span class="block font-mono text-[10px] tracking-widest text-[#B82E28] uppercase mb-1">
+                IDIOMAS
+              </span>
+              <span class="text-xs sm:text-sm text-[#ECE6DB] font-medium">
+                Português nativo · Inglês avançado
+              </span>
+            </div>
+          </div>
+
+          <!-- Botão para Baixar Currículo Oficial -->
+          <div class="pt-2">
+            <a href="assets/Curriculo_Bernardo_Oliveira.pdf" download class="inline-flex items-center gap-2.5 px-5 py-2.5 border border-[#ECE6DB]/20 hover:border-[#B82E28] text-xs font-mono tracking-wider uppercase text-[#ECE6DB] hover:text-[#B82E28] transition-colors">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v12m0 0l-3-3m3 3l3-3m-8 7h10"></path>
+              </svg>
+              <span>BAIXAR CURRÍCULO (PDF)</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Direita: Foto Menor com Quadrado Vermelho e Legenda -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-sm sm:max-w-md">
+            
+            <!-- Moldura da foto em P&B -->
+            <div class="border border-[#ECE6DB]/15 bg-[#0F1112] overflow-hidden">
+              <img 
+                src="assets/retrato-bernardo.webp" 
+                alt="Bernardo Oliveira" 
+                class="portrait-editorial w-full h-[320px] sm:h-[370px] object-cover object-center"
+              >
+            </div>
+
+            <!-- Quadrado vermelho no canto inferior esquerdo com legenda -->
+            <div class="flex items-center gap-4 mt-4">
+              <div class="w-8 h-8 bg-[#B82E28] flex-shrink-0" aria-hidden="true"></div>
+              <div>
+                <p class="font-mono text-[10px] tracking-widest text-[#ECE6DB] uppercase font-bold">
+                  APRENDIZADO CONTÍNUO
+                </p>
+                <p class="text-xs text-[#A8A8A0]">
+                  Projetos, pessoas e prática.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Parte Inferior (02 / HABILIDADES) -->
+      <div class="border-t border-[#ECE6DB]/10 pt-12 sm:pt-16">
+        <p class="font-mono text-xs font-semibold tracking-super-wide text-[#B82E28] uppercase mb-2">
+          02 / HABILIDADES
+        </p>
+
+        <h3 class="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight text-[#ECE6DB] mb-8">
+          Ferramentas para construir boas ideias.
+        </h3>
+
+        <!-- Tabela Editorial de Linhas Horizontais -->
+        <div class="divide-y divide-[#ECE6DB]/10 border-y border-[#ECE6DB]/10">
+          
+          <!-- Linha 1: Back-End & APIs -->
+          <div class="py-4 sm:py-5 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 items-baseline">
+            <span class="sm:col-span-4 font-mono text-xs font-semibold tracking-wider text-[#B82E28] uppercase">
+              BACK-END & APIs
+            </span>
+            <span class="sm:col-span-8 text-sm sm:text-base text-[#ECE6DB] font-medium leading-relaxed">
+              Node.js <span class="text-[#A8A8A0] font-normal">·</span> TypeScript <span class="text-[#A8A8A0] font-normal">·</span> Fastify <span class="text-[#A8A8A0] font-normal">·</span> REST APIs <span class="text-[#A8A8A0] font-normal">·</span> JWT <span class="text-[#A8A8A0] font-normal">·</span> processamento assíncrono
+            </span>
+          </div>
+
+          <!-- Linha 2: Dados & IA -->
+          <div class="py-4 sm:py-5 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 items-baseline">
+            <span class="sm:col-span-4 font-mono text-xs font-semibold tracking-wider text-[#B82E28] uppercase">
+              DADOS & IA
+            </span>
+            <span class="sm:col-span-8 text-sm sm:text-base text-[#ECE6DB] font-medium leading-relaxed">
+              PostgreSQL <span class="text-[#A8A8A0] font-normal">·</span> Prisma <span class="text-[#A8A8A0] font-normal">·</span> pgvector <span class="text-[#A8A8A0] font-normal">·</span> Redis <span class="text-[#A8A8A0] font-normal">·</span> BullMQ <span class="text-[#A8A8A0] font-normal">·</span> Google Gemini / LLMs
+            </span>
+          </div>
+
+          <!-- Linha 3: Ferramentas -->
+          <div class="py-4 sm:py-5 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 items-baseline">
+            <span class="sm:col-span-4 font-mono text-xs font-semibold tracking-wider text-[#B82E28] uppercase">
+              FERRAMENTAS
+            </span>
+            <span class="sm:col-span-8 text-sm sm:text-base text-[#ECE6DB] font-medium leading-relaxed">
+              Docker <span class="text-[#A8A8A0] font-normal">·</span> Zod <span class="text-[#A8A8A0] font-normal">·</span> Vitest <span class="text-[#A8A8A0] font-normal">·</span> Resend <span class="text-[#A8A8A0] font-normal">·</span> Git <span class="text-[#A8A8A0] font-normal">·</span> Linux
+            </span>
+          </div>
+
+          <!-- Linha 4: Linguagens -->
+          <div class="py-4 sm:py-5 grid grid-cols-1 sm:grid-cols-12 gap-2 sm:gap-6 items-baseline">
+            <span class="sm:col-span-4 font-mono text-xs font-semibold tracking-wider text-[#B82E28] uppercase">
+              LINGUAGENS
+            </span>
+            <span class="sm:col-span-8 text-sm sm:text-base text-[#ECE6DB] font-medium leading-relaxed">
+              C <span class="text-[#A8A8A0] font-normal">·</span> C++ <span class="text-[#A8A8A0] font-normal">·</span> Python <span class="text-xs text-[#A8A8A0] font-mono">(em aprendizado)</span>
+            </span>
+          </div>
+
+        </div>
+
+        <!-- Bloco Adicional: Vivência em Comunidade e Eventos -->
+        <div class="mt-12 bg-white/[0.02] border border-[#ECE6DB]/10 p-6 sm:p-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-4">
+            <span class="font-mono text-xs tracking-widest text-[#B82E28] uppercase font-semibold">
+              EXPERIÊNCIA & COMUNIDADE DE T.I.
+            </span>
+            <span class="font-mono text-xs text-[#A8A8A0]">
+              MONITORIAS TÉCNICAS · 2026
+            </span>
+          </div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs text-[#A8A8A0] leading-relaxed">
+            <div>
+              <p class="text-sm font-bold text-[#ECE6DB] mb-1">Reprograme-se (UNIFAN)</p>
+              <p>Apoio operacional, orientação de participantes, credenciamento e suporte técnico direto a palestrantes e organizadores (+15h).</p>
+            </div>
+            <div>
+              <p class="text-sm font-bold text-[#ECE6DB] mb-1">Esquenta DevOpsDay Feira de Santana</p>
+              <p>Recepção de participantes, suporte de infraestrutura do evento, controle de fluxo e apoio a palestras da comunidade local (+15h).</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- SEÇÃO 3: PROJETOS                          -->
+    <!-- ========================================== -->
+    <section id="section-projetos" class="tab-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full py-10 lg:py-16">
+      
+      <!-- Cabeçalho da Seção de Projetos -->
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-[#ECE6DB]/10 mb-8 sm:mb-12">
+        <div class="max-w-2xl">
+          <p class="font-mono text-xs font-semibold tracking-super-wide text-[#B82E28] uppercase mb-2">
+            02 / PROJETOS
+          </p>
+          <h2 class="font-sans text-4xl sm:text-5xl font-extrabold tracking-tight text-[#ECE6DB] mb-3">
+            Ideias em prática.
+          </h2>
+          <p class="text-sm sm:text-base text-[#A8A8A0] leading-relaxed">
+            Projetos que conectam desenvolvimento, dados e inteligência artificial a problemas concretos — com foco no aprendizado e na evolução constante.
+          </p>
+        </div>
+
+        <div class="text-left md:text-right border-l-2 md:border-l-0 md:border-r-2 border-[#B82E28] pl-4 md:pl-0 md:pr-4 py-1">
+          <span class="block font-mono text-[10px] tracking-widest text-[#A8A8A0] uppercase">
+            EM DESTAQUE
+          </span>
+          <span class="font-sans font-bold text-xl sm:text-2xl text-[#ECE6DB]">
+            03 projetos
+          </span>
+        </div>
+      </div>
+
+      <!-- Lista de Projetos (3 Linhas Horizontais com Divisórias Finas) -->
+      <div class="divide-y divide-[#ECE6DB]/10 border-b border-[#ECE6DB]/10">
+        
+        <!-- ======================================== -->
+        <!-- PROJETO 01: PROXIMITY                    -->
+        <!-- ======================================== -->
+        <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group transition-colors duration-200 hover:bg-white/[0.015] px-2 sm:px-4 -mx-2 sm:-mx-4 rounded-sm">
+          
+          <!-- Número em Vermelho -->
+          <div class="lg:col-span-1">
+            <span class="font-mono font-bold text-lg sm:text-xl text-[#B82E28]">
+              01
+            </span>
+          </div>
+
+          <!-- Thumbnail Minimalista Abstrato em SVG (Line/Route Graph) -->
+          <div class="lg:col-span-3">
+            <div class="w-full h-32 sm:h-36 bg-[#141718] border border-[#ECE6DB]/10 relative overflow-hidden flex items-center justify-center p-3">
+              <svg class="w-full h-full" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Linhas sutis de grid horizontal -->
+                <line x1="0" y1="25" x2="200" y2="25" stroke="#ECE6DB" stroke-opacity="0.06" stroke-dasharray="2 3"/>
+                <line x1="0" y1="50" x2="200" y2="50" stroke="#ECE6DB" stroke-opacity="0.06" stroke-dasharray="2 3"/>
+                <line x1="0" y1="75" x2="200" y2="75" stroke="#ECE6DB" stroke-opacity="0.06" stroke-dasharray="2 3"/>
+                
+                <!-- Rota / Polilinha Conectada -->
+                <polyline points="20,70 65,48 100,72 150,22 185,26" stroke="#ECE6DB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                
+                <!-- Nós com Destaque em Vermelho e Marfim -->
+                <circle cx="20" cy="70" r="4" fill="#B82E28"/>
+                <circle cx="65" cy="48" r="3.5" fill="#ECE6DB"/>
+                <circle cx="100" cy="72" r="3.5" fill="#ECE6DB"/>
+                <circle cx="150" cy="22" r="4.5" fill="#ECE6DB"/>
+                <circle cx="185" cy="26" r="4" fill="#B82E28"/>
+              </svg>
+              <span class="absolute bottom-1.5 left-2 font-mono text-[9px] text-[#A8A8A0]/60 tracking-wider">PX / AI FOR IMPACT</span>
+            </div>
+          </div>
+
+          <!-- Conteúdo Central: Título, Badge, Descrição e Tags -->
+          <div class="lg:col-span-6 space-y-3">
+            <div class="flex flex-wrap items-center gap-3">
+              <h3 class="font-sans font-bold text-xl sm:text-2xl text-[#ECE6DB] tracking-tight">
+                PROXIMITY
+              </h3>
+              <span class="inline-block border border-[#B82E28] px-2.5 py-0.5 text-[10px] font-mono tracking-wider text-[#B82E28] uppercase font-semibold">
+                PROTÓTIPO EM DESENVOLVIMENTO
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-[#A8A8A0] leading-relaxed">
+              Ideia de guia inteligente para ajudar pessoas a compreender orientações e próximos passos no acesso a serviços públicos. A proposta ainda precisa de validação, melhoria das fontes e testes com usuários.
+            </p>
+
+            <!-- Tags (pills com borda fina arredondada) -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Next.js
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Node.js
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Gemini
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                APIs públicas
+              </span>
+            </div>
+          </div>
+
+          <!-- Link / Botão 'VER ESTUDO ↗' à Direita -->
+          <div class="lg:col-span-2 flex justify-start lg:justify-end">
+            <button 
+              onclick="openProjectModal('proximity')" 
+              class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn focus:outline-none"
+            >
+              <span>VER ESTUDO</span>
+              <span class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-[#B82E28]">↗</span>
+            </button>
+          </div>
+
+        </article>
+
+        <!-- ======================================== -->
+        <!-- PROJETO 02: HEALTHTECH                   -->
+        <!-- ======================================== -->
+        <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group transition-colors duration-200 hover:bg-white/[0.015] px-2 sm:px-4 -mx-2 sm:-mx-4 rounded-sm">
+          
+          <!-- Número em Vermelho -->
+          <div class="lg:col-span-1">
+            <span class="font-mono font-bold text-lg sm:text-xl text-[#B82E28]">
+              02
+            </span>
+          </div>
+
+          <!-- Thumbnail Minimalista Abstrato em SVG (Hospital Red Cross & ECG Box) -->
+          <div class="lg:col-span-3">
+            <div class="w-full h-32 sm:h-36 bg-[#141718] border border-[#ECE6DB]/10 relative overflow-hidden flex items-center justify-center p-3">
+              <svg class="w-full h-full" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Linha sutil de ECG no fundo -->
+                <path d="M0,50 L70,50 L77,35 L85,65 L92,42 L98,54 L105,50 L200,50" stroke="#ECE6DB" stroke-opacity="0.08" stroke-width="1.5"/>
+                
+                <!-- Caixa de foco retangular -->
+                <rect x="75" y="20" width="50" height="60" stroke="#ECE6DB" stroke-opacity="0.3" stroke-width="1"/>
+                
+                <!-- Cruz Médica em Vermelho Drama -->
+                <path d="M100,32 L100,68 M82,50 L118,50" stroke="#B82E28" stroke-width="4.5" stroke-linecap="square"/>
+              </svg>
+              <span class="absolute bottom-1.5 left-2 font-mono text-[9px] text-[#A8A8A0]/60 tracking-wider">HT / CLINICAL BACKEND</span>
+            </div>
+          </div>
+
+          <!-- Conteúdo Central: Título, Subtítulo, Descrição e Tags -->
+          <div class="lg:col-span-6 space-y-3">
+            <div>
+              <h3 class="font-sans font-bold text-xl sm:text-2xl text-[#ECE6DB] tracking-tight">
+                HEALTHTECH
+              </h3>
+              <p class="font-sans text-xs sm:text-sm text-[#A8A8A0] font-medium mt-0.5">
+                Plataforma de gestão clínica
+              </p>
+            </div>
+
+            <p class="text-xs sm:text-sm text-[#A8A8A0] leading-relaxed">
+              Backend para gestão clínica hospitalar, com suporte a consultas, prontuários, fluxos de enfermagem, passagens de plantão, comunicação com familiares e análises operacionais.
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Node.js
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                TypeScript
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                PostgreSQL
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Redis
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                BullMQ
+              </span>
+            </div>
+          </div>
+
+          <!-- Link / Botão 'VER ESTUDO ↗' à Direita -->
+          <div class="lg:col-span-2 flex justify-start lg:justify-end">
+            <button 
+              onclick="openProjectModal('healthtech')" 
+              class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn focus:outline-none"
+            >
+              <span>VER ESTUDO</span>
+              <span class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-[#B82E28]">↗</span>
+            </button>
+          </div>
+
+        </article>
+
+        <!-- ======================================== -->
+        <!-- PROJETO 03: GRACON                       -->
+        <!-- ======================================== -->
+        <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group transition-colors duration-200 hover:bg-white/[0.015] px-2 sm:px-4 -mx-2 sm:-mx-4 rounded-sm">
+          
+          <!-- Número em Vermelho -->
+          <div class="lg:col-span-1">
+            <span class="font-mono font-bold text-lg sm:text-xl text-[#B82E28]">
+              03
+            </span>
+          </div>
+
+          <!-- Thumbnail Minimalista Abstrato em SVG (Contract Lines & Slanted Red Cut) -->
+          <div class="lg:col-span-3">
+            <div class="w-full h-32 sm:h-36 bg-[#141718] border border-[#ECE6DB]/10 relative overflow-hidden flex items-center justify-center p-3">
+              <svg class="w-full h-full" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Linhas Horizontais representando o Contrato -->
+                <line x1="30" y1="25" x2="150" y2="25" stroke="#ECE6DB" stroke-opacity="0.35" stroke-width="2"/>
+                <line x1="30" y1="38" x2="165" y2="38" stroke="#ECE6DB" stroke-opacity="0.25" stroke-width="2"/>
+                <line x1="30" y1="51" x2="140" y2="51" stroke="#ECE6DB" stroke-opacity="0.3" stroke-width="2"/>
+                <line x1="30" y1="64" x2="158" y2="64" stroke="#ECE6DB" stroke-opacity="0.2" stroke-width="2"/>
+                <line x1="30" y1="77" x2="120" y2="77" stroke="#ECE6DB" stroke-opacity="0.3" stroke-width="2"/>
+                
+                <!-- Linha Dramática Vermelha Inclinada Cruzando as Cláusulas -->
+                <line x1="145" y1="18" x2="175" y2="84" stroke="#B82E28" stroke-width="3.5" stroke-linecap="round"/>
+              </svg>
+              <span class="absolute bottom-1.5 left-2 font-mono text-[9px] text-[#A8A8A0]/60 tracking-wider">GC / DOC INTELLIGENCE</span>
+            </div>
+          </div>
+
+          <!-- Conteúdo Central: Título, Subtítulo, Descrição e Tags -->
+          <div class="lg:col-span-6 space-y-3">
+            <div>
+              <h3 class="font-sans font-bold text-xl sm:text-2xl text-[#ECE6DB] tracking-tight">
+                GRACON
+              </h3>
+              <p class="font-sans text-xs sm:text-sm text-[#A8A8A0] font-medium mt-0.5">
+                Gestão inteligente de contratos
+              </p>
+            </div>
+
+            <p class="text-xs sm:text-sm text-[#A8A8A0] leading-relaxed">
+              MVP para receber contratos em PDF, extrair informações estruturadas com IA, oferecer busca semântica e versionamento, além de ambiente autenticado e perfis de acesso.
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Node.js
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                TypeScript
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                PostgreSQL
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                pgvector
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Gemini
+              </span>
+            </div>
+          </div>
+
+          <!-- Link / Botão 'VER ESTUDO ↗' à Direita -->
+          <div class="lg:col-span-2 flex justify-start lg:justify-end">
+            <button 
+              onclick="openProjectModal('gracon')" 
+              class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn focus:outline-none"
+            >
+              <span>VER ESTUDO</span>
+              <span class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-[#B82E28]">↗</span>
+            </button>
+          </div>
+
+        </article>
+
+      </div>
+
+    </section>
+
+
+    <!-- ========================================== -->
+    <!-- SEÇÃO 4: CONTATO                           -->
+    <!-- ========================================== -->
+    <section id="section-contato" class="tab-section max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 w-full py-10 lg:py-16">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+        
+        <!-- Esquerda: Informações e Filosofia -->
+        <div class="lg:col-span-6 space-y-6">
+          <p class="font-mono text-xs font-semibold tracking-super-wide text-[#B82E28] uppercase">
+            03 / CONTATO
+          </p>
+
+          <h2 class="font-sans text-4xl sm:text-5xl font-extrabold tracking-tight text-[#ECE6DB] leading-tight">
+            Vamos conversar e construir juntos.
+          </h2>
+
+          <p class="text-sm sm:text-base text-[#A8A8A0] leading-relaxed">
+            Seja para oportunidades profissionais, colaboração em projetos de back-end e inteligência artificial, ou para trocar ideias sobre arquitetura de software, estou sempre disponível.
+          </p>
+
+          <!-- Bloco com barra vertical vermelha -->
+          <div class="border-l-2 border-[#B82E28] pl-4 py-1 space-y-1">
+            <p class="text-xs font-mono text-[#ECE6DB] font-semibold uppercase">
+              RESPOSTA RÁPIDA
+            </p>
+            <p class="text-xs text-[#A8A8A0]">
+              Normalmente respondo e-mails e mensagens no LinkedIn no mesmo dia útil.
+            </p>
+          </div>
+
+          <!-- Indicador de Disponibilidade -->
+          <div class="pt-4 flex items-center gap-3">
+            <span class="relative flex h-3 w-3">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#4CAF50] opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-[#4CAF50]"></span>
+            </span>
+            <span class="text-xs font-mono text-[#ECE6DB]">
+              Disponível para estágios, projetos júnior e freelance back-end.
+            </span>
+          </div>
+        </div>
+
+        <!-- Direita: Grade de Links de Alta Visibilidade -->
+        <div class="lg:col-span-6 space-y-4">
+          
+          <!-- E-mail -->
+          <a href="mailto:bernadoxd@gmail.com" class="flex items-center justify-between p-5 border border-[#ECE6DB]/10 bg-white/[0.015] hover:border-[#B82E28] hover:bg-white/[0.03] transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-[#B82E28]/10 text-[#B82E28] flex items-center justify-center font-mono text-sm font-bold border border-[#B82E28]/20 group-hover:bg-[#B82E28] group-hover:text-[#ECE6DB] transition-colors">
+                @
+              </div>
+              <div>
+                <span class="block font-mono text-[10px] tracking-widest text-[#A8A8A0] uppercase">
+                  E-MAIL DIRETO
+                </span>
+                <span class="font-sans font-bold text-sm sm:text-base text-[#ECE6DB]">
+                  bernadoxd@gmail.com
+                </span>
+              </div>
+            </div>
+            <span class="font-mono text-xs text-[#A8A8A0] group-hover:text-[#B82E28] group-hover:translate-x-1 transition-all">
+              ENVIAR ↗
+            </span>
+          </a>
+
+          <!-- LinkedIn -->
+          <a href="https://www.linkedin.com/in/bernardooliveira88" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-5 border border-[#ECE6DB]/10 bg-white/[0.015] hover:border-[#B82E28] hover:bg-white/[0.03] transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-[#B82E28]/10 text-[#B82E28] flex items-center justify-center font-mono text-sm font-bold border border-[#B82E28]/20 group-hover:bg-[#B82E28] group-hover:text-[#ECE6DB] transition-colors">
+                in
+              </div>
+              <div>
+                <span class="block font-mono text-[10px] tracking-widest text-[#A8A8A0] uppercase">
+                  LINKEDIN
+                </span>
+                <span class="font-sans font-bold text-sm sm:text-base text-[#ECE6DB]">
+                  linkedin.com/in/bernardooliveira88
+                </span>
+              </div>
+            </div>
+            <span class="font-mono text-xs text-[#A8A8A0] group-hover:text-[#B82E28] group-hover:translate-x-1 transition-all">
+              CONECTAR ↗
+            </span>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/Bernardoliveira88" target="_blank" rel="noopener noreferrer" class="flex items-center justify-between p-5 border border-[#ECE6DB]/10 bg-white/[0.015] hover:border-[#B82E28] hover:bg-white/[0.03] transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-[#B82E28]/10 text-[#B82E28] flex items-center justify-center font-mono text-sm font-bold border border-[#B82E28]/20 group-hover:bg-[#B82E28] group-hover:text-[#ECE6DB] transition-colors">
+                GH
+              </div>
+              <div>
+                <span class="block font-mono text-[10px] tracking-widest text-[#A8A8A0] uppercase">
+                  GITHUB
+                </span>
+                <span class="font-sans font-bold text-sm sm:text-base text-[#ECE6DB]">
+                  github.com/Bernardoliveira88
+                </span>
+              </div>
+            </div>
+            <span class="font-mono text-xs text-[#A8A8A0] group-hover:text-[#B82E28] group-hover:translate-x-1 transition-all">
+              EXPLORAR ↗
+            </span>
+          </a>
+
+          <!-- Currículo PDF -->
+          <a href="assets/Curriculo_Bernardo_Oliveira.pdf" download class="flex items-center justify-between p-5 border border-[#ECE6DB]/10 bg-white/[0.015] hover:border-[#B82E28] hover:bg-white/[0.03] transition-all group">
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 bg-[#B82E28]/10 text-[#B82E28] flex items-center justify-center font-mono text-sm font-bold border border-[#B82E28]/20 group-hover:bg-[#B82E28] group-hover:text-[#ECE6DB] transition-colors">
+                PDF
+              </div>
+              <div>
+                <span class="block font-mono text-[10px] tracking-widest text-[#A8A8A0] uppercase">
+                  CURRÍCULO EM PDF
+                </span>
+                <span class="font-sans font-bold text-sm sm:text-base text-[#ECE6DB]">
+                  Curriculo_Bernardo_Oliveira.pdf
+                </span>
+              </div>
+            </div>
+            <span class="font-mono text-xs text-[#A8A8A0] group-hover:text-[#B82E28] group-hover:translate-y-0.5 transition-all">
+              BAIXAR ↓
+            </span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ========================================== -->
+  <!-- MODAL / DIALOG DETALHES DO ESTUDO          -->
+  <!-- ========================================== -->
+  <dialog id="projectModal" class="bg-[#0F1112] text-[#ECE6DB] border border-[#ECE6DB]/20 max-w-2xl w-[92vw] p-0 shadow-2xl focus:outline-none">
+    <div class="p-6 sm:p-8 space-y-6">
+      
+      <!-- Cabeçalho do Modal -->
+      <div class="flex items-center justify-between border-b border-[#ECE6DB]/10 pb-4">
+        <div>
+          <span id="modalCategory" class="font-mono text-[10px] tracking-super-wide text-[#B82E28] uppercase font-bold">
+            ESTUDO DE CASO
+          </span>
+          <h3 id="modalTitle" class="font-sans font-bold text-2xl sm:text-3xl text-[#ECE6DB]">
+            Título do Projeto
+          </h3>
+        </div>
+        <button onclick="closeProjectModal()" class="text-[#A8A8A0] hover:text-[#ECE6DB] p-2 font-mono text-lg focus:outline-none" aria-label="Fechar modal">
+          ✕
+        </button>
+      </div>
+
+      <!-- Resumo Principal -->
+      <p id="modalSummary" class="text-sm sm:text-base text-[#A8A8A0] leading-relaxed">
+        Resumo da solução e problema abordado.
+      </p>
+
+      <!-- Detalhamento em Seções -->
+      <div id="modalDetails" class="space-y-4 text-xs sm:text-sm">
+        <!-- Injetado dinamicamente via JS -->
+      </div>
+
+      <!-- Stack de Tecnologias -->
+      <div class="pt-4 border-t border-[#ECE6DB]/10">
+        <span class="block font-mono text-[10px] tracking-widest text-[#B82E28] uppercase mb-2">
+          TECNOLOGIAS & FERRAMENTAS
+        </span>
+        <div id="modalStack" class="flex flex-wrap gap-2">
+          <!-- Injetado dinamicamente via JS -->
+        </div>
+      </div>
+
+      <!-- Rodapé do Modal -->
+      <div class="pt-4 border-t border-[#ECE6DB]/10 flex justify-between items-center text-xs font-mono text-[#A8A8A0]">
+        <span id="modalNote" class="text-[11px] text-[#A8A8A0]/70">
+          Baseado no currículo e documentação técnica do projeto.
+        </span>
+        <button onclick="closeProjectModal()" class="px-4 py-2 bg-[#B82E28] text-[#ECE6DB] font-semibold text-xs tracking-wider uppercase hover:bg-[#cf352e] transition-colors">
+          FECHAR
+        </button>
+      </div>
+
+    </div>
+  </dialog>
+
+
+  <!-- ========================================== -->
+  <!-- 2. FOOTER DE SEÇÃO (CONSISTENTE & DINÂMICO)-->
+  <!-- ========================================== -->
+  <footer class="border-t border-[#ECE6DB]/10 bg-[#0F1112]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 h-14 sm:h-16 flex items-center justify-between font-mono text-[10px] sm:text-xs text-[#A8A8A0] tracking-wider">
+      
+      <!-- Esquerda Dinâmica baseada na aba ativa -->
+      <div class="flex items-center gap-2">
+        <span class="w-1.5 h-1.5 bg-[#B82E28]"></span>
+        <span id="footerBreadcrumb" class="uppercase">
+          DIREÇÃO VISUAL / INÍCIO
+        </span>
+      </div>
+
+      <!-- Direita: Assinatura e Ano -->
+      <div>
+        <span class="text-[#ECE6DB] font-semibold">BO / 2026</span>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ========================================== -->
+  <!-- SCRIPT DE INTERATIVIDADE E NAVEGAÇÃO       -->
+  <!-- ========================================== -->
+  <script>
+    // Dados detalhados dos projetos
+    const projectsData = {
+      proximity: {
+        title: 'PROXIMITY',
+        category: 'PROTÓTIPO EM DESENVOLVIMENTO · NAUFEST #AIFORIMPACT',
+        summary: 'Uma ideia de produto concebida para aproximar cidadãos de municípios menores e áreas periféricas das orientações práticas sobre acesso a serviços públicos.',
+        details: [
+          {
+            title: 'O Problema',
+            text: 'Muitos cidadãos enfrentam burocracia desnecessária e deslocamentos perdidos devido à dispersão das informações oficiais e falta de orientações claras sobre documentos e pré-requisitos.'
+          },
+          {
+            title: 'Proposta de Solução',
+            text: 'Desenvolvimento de uma interface que interpreta linguagem natural e organiza um passo a passo objetivo de atendimento, citando fontes oficiais e destacando o que ainda precisa ser confirmado presencialmente.'
+          },
+          {
+            title: 'Arquitetura e Resiliência',
+            text: 'Estruturado com Next.js, Node.js e Gemini API, com mecanismo de busca determinística de contingência caso os serviços externos de IA estejam indisponíveis.'
+          }
+        ],
+        stack: ['Next.js', 'Node.js', 'TypeScript', 'Google Gemini', 'Vitest', 'APIs públicas'],
+        note: 'Projeto premiado/concluído no NAUFest Challenge #AIForImpact (JA Americas x HP).'
+      },
+      healthtech: {
+        title: 'HEALTHTECH',
+        category: 'BACKEND HOSPITALAR · GESTÃO CLÍNICA',
+        summary: 'Sistema backend robusto para orquestração de processos hospitalares e gestão clínica multiprofissional.',
+        details: [
+          {
+            title: 'Escopo Operacional',
+            text: 'Atendimento a prontuários eletrônicos de pacientes, agendamento de consultas médicas, passagens de plantão de enfermagem e relatórios gerenciais.'
+          },
+          {
+            title: 'Processamento Assíncrono e IA',
+            text: 'Filas com BullMQ e Redis para transcrição de áudios e sumarização automatizada de prontuários com Google Gemini, permitindo rapidez na troca de turno das equipes de saúde.'
+          },
+          {
+            title: 'Segurança e Dados',
+            text: 'Modelagem relacional segura com PostgreSQL e Prisma ORM, autenticação baseada em JWT e validação estrita de esquemas com Zod.'
+          }
+        ],
+        stack: ['Node.js', 'TypeScript', 'Fastify', 'Prisma', 'PostgreSQL', 'Redis', 'BullMQ', 'Docker', 'Google Gemini', 'Zod'],
+        note: 'Arquitetura focada em escalabilidade horizontal e resiliência hospitalar.'
+      },
+      gracon: {
+        title: 'GRACON',
+        category: 'MVP · GESTÃO INTELIGENTE DE CONTRATOS',
+        summary: 'Plataforma para recebimento, parsing automatizado e busca semântica em acervos de contratos jurídicos e corporativos.',
+        details: [
+          {
+            title: 'Extração e Busca Semântica',
+            text: 'Processamento de arquivos PDF com extração de metadados críticos (vigência, valores, cláusulas rescisórias) e indexação de embeddings via pgvector no PostgreSQL.'
+          },
+          {
+            title: 'Versionamento e Auditoria',
+            text: 'Histórico de versões de aditivos contratuais, controle de permissões por perfil de usuário e notificações automatizadas de renovação via Resend.'
+          },
+          {
+            title: 'Qualidade de Código',
+            text: 'Cobertura de testes automatizados com Vitest, isolamento de dependências em contêineres Docker e tipagem estrita com TypeScript.'
+          }
+        ],
+        stack: ['Node.js', 'TypeScript', 'Fastify', 'Prisma', 'PostgreSQL', 'pgvector', 'Google Gemini', 'Zod', 'Resend', 'Vitest', 'Docker'],
+        note: 'Construído como MVP com validação de busca semântica vetorial.'
+      }
+    };
+
+    // Mapeamento dos breadcrumbs do footer por aba
+    const footerLabels = {
+      inicio: 'DIREÇÃO VISUAL / INÍCIO',
+      sobre: 'DIREÇÃO VISUAL / SOBRE & HABILIDADES',
+      projetos: 'PORTFÓLIO EM EVOLUÇÃO / DESCRIÇÕES BASEADAS NO CURRÍCULO E NAS INFORMAÇÕES DISPONÍVEIS',
+      contato: 'DIREÇÃO VISUAL / CONTATO'
+    };
+
+    // Alternância de Abas com Suporte a URL Hash e Histórico
+    function switchTab(tabId) {
+      const validTabs = ['inicio', 'sobre', 'projetos', 'contato'];
+      if (!validTabs.includes(tabId)) tabId = 'inicio';
+
+      // 1. Alterna seções
+      validTabs.forEach(id => {
+        const sec = document.getElementById(`section-${id}`);
+        if (sec) {
+          if (id === tabId) {
+            sec.classList.add('is-active');
+          } else {
+            sec.classList.remove('is-active');
+          }
+        }
+      });
+
+      // 2. Atualiza links da barra de navegação desktop
+      document.querySelectorAll('.nav-item').forEach(link => {
+        const isCurrent = link.getAttribute('data-tab') === tabId;
+        link.classList.toggle('is-active', isCurrent);
+        if (isCurrent) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
+      });
+
+      // 3. Atualiza links da barra mobile
+      document.querySelectorAll('[data-tab-mobile]').forEach(link => {
+        const isCurrent = link.getAttribute('data-tab-mobile') === tabId;
+        if (isCurrent) {
+          link.classList.add('text-[#ECE6DB]', 'border-[#B82E28]');
+          link.classList.remove('text-[#A8A8A0]', 'border-transparent');
+        } else {
+          link.classList.remove('text-[#ECE6DB]', 'border-[#B82E28]');
+          link.classList.add('text-[#A8A8A0]', 'border-transparent');
+        }
+      });
+
+      // 4. Atualiza o rodapé de seção
+      const footerBreadcrumb = document.getElementById('footerBreadcrumb');
+      if (footerBreadcrumb && footerLabels[tabId]) {
+        footerBreadcrumb.textContent = footerLabels[tabId];
+      }
+
+      // 5. Atualiza URL sem recarregar a página
+      if (window.location.hash !== `#${tabId}`) {
+        window.history.pushState(null, '', `#${tabId}`);
+      }
+
+      // 6. Rola suavemente para o topo se estiver distante
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Controle do Menu Mobile
+    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    function toggleMobileMenu(forceState) {
+      const isCurrentlyHidden = mobileMenu.classList.contains('hidden');
+      const shouldOpen = forceState !== undefined ? forceState : isCurrentlyHidden;
+      if (shouldOpen) {
+        mobileMenu.classList.remove('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'true');
+      } else {
+        mobileMenu.classList.add('hidden');
+        mobileMenuBtn.setAttribute('aria-expanded', 'false');
+      }
+    }
+    mobileMenuBtn?.addEventListener('click', () => toggleMobileMenu());
+
+    // Suporte ao botão voltar/avançar do navegador
+    window.addEventListener('popstate', () => {
+      const hash = window.location.hash.replace('#', '') || 'inicio';
+      switchTab(hash);
+    });
+
+    // Controle do Modal de Detalhes do Projeto
+    const projectModal = document.getElementById('projectModal');
+    function openProjectModal(key) {
+      const proj = projectsData[key];
+      if (!proj || !projectModal) return;
+
+      document.getElementById('modalTitle').textContent = proj.title;
+      document.getElementById('modalCategory').textContent = proj.category;
+      document.getElementById('modalSummary').textContent = proj.summary;
+      document.getElementById('modalNote').textContent = proj.note;
+
+      // Monta detalhes
+      const detailsContainer = document.getElementById('modalDetails');
+      detailsContainer.innerHTML = '';
+      proj.details.forEach(item => {
+        const div = document.createElement('div');
+        div.className = 'border-l-2 border-[#B82E28]/60 pl-3 py-1';
+        div.innerHTML = `<strong class="text-[#ECE6DB] font-semibold block text-xs uppercase tracking-wider mb-1">${item.title}</strong><p class="text-[#A8A8A0] leading-relaxed">${item.text}</p>`;
+        detailsContainer.appendChild(div);
+      });
+
+      // Monta tags
+      const stackContainer = document.getElementById('modalStack');
+      stackContainer.innerHTML = '';
+      proj.stack.forEach(tech => {
+        const badge = document.createElement('span');
+        badge.className = 'px-2.5 py-1 text-xs font-mono border border-[#ECE6DB]/15 bg-white/[0.03] text-[#ECE6DB]';
+        badge.textContent = tech;
+        stackContainer.appendChild(badge);
+      });
+
+      projectModal.showModal();
+    }
+
+    function closeProjectModal() {
+      projectModal?.close();
+    }
+
+    projectModal?.addEventListener('click', (e) => {
+      if (e.target === projectModal) closeProjectModal();
+    });
+
+    // Atalhos de teclado: ESC fecha modal, setas navegam entre abas
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && projectModal?.open) {
+        closeProjectModal();
+      }
+    });
+
+    // Inicialização ao carregar
+    window.addEventListener('DOMContentLoaded', () => {
+      const initialTab = window.location.hash.replace('#', '') || 'inicio';
+      switchTab(initialTab);
+    });
+  </script>
+</body>
+</html>

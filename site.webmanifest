@@ -1,0 +1,9 @@
+{
+  "name": "Bernardo Oliveira — Portfólio",
+  "short_name": "BO Portfólio",
+  "lang": "pt-BR",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#0b0d0e",
+  "theme_color": "#0b0d0e"
+}

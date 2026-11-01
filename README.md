@@ -10,7 +10,7 @@ Site estático, responsivo e sem etapa de build. Foi montado com HTML, CSS e Jav
 
 ## Publicar
 
-O site está publicado na Vercel (projeto `bernardo-portfolio`, time nexustech3): cada push na `main` atualiza https://bernardo-portfolio-nine.vercel.app e cada branch ganha uma prévia própria.
+O site está publicado na Vercel (projeto `bernardo-portfolio`, time nexustech3): cada push na `main` atualiza https://bernardoliveira88.vercel.app (endereço principal, também acessível por https://bernardo-portfolio-nine.vercel.app) e cada branch ganha uma prévia própria.
 
 ## Arquivos principais
 

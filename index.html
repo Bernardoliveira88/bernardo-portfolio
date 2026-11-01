@@ -576,7 +576,7 @@
             EM DESTAQUE
           </span>
           <span class="font-sans font-bold text-xl sm:text-2xl text-[#ECE6DB]">
-            03 projetos
+            04 projetos
           </span>
         </div>
       </div>
@@ -631,16 +631,16 @@
             </div>
 
             <p class="text-xs sm:text-sm text-[#A8A8A0] leading-relaxed">
-              Ideia de guia inteligente para ajudar pessoas a compreender orientações e próximos passos no acesso a serviços públicos. A proposta ainda precisa de validação, melhoria das fontes e testes com usuários.
+              Guia que interpreta a necessidade do cidadão em linguagem natural e organiza o passo a passo para acessar serviços públicos, com base em fontes oficiais. MVP com cobertura inicial de saúde e assistência social; ainda precisa de validação e testes com usuários.
             </p>
 
             <!-- Tags (pills com borda fina arredondada) -->
             <div class="flex flex-wrap gap-2 pt-1">
               <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
-                Next.js
+                React
               </span>
               <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
-                Node.js
+                TanStack Start
               </span>
               <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
                 Gemini
@@ -651,10 +651,17 @@
             </div>
           </div>
 
-          <!-- Link / Botão 'VER ESTUDO ↗' à Direita -->
-          <div class="lg:col-span-2 flex justify-start lg:justify-end">
-            <button 
-              onclick="openProjectModal('proximity')" 
+          <!-- Links: Demo, Código e Estudo à Direita -->
+          <div class="lg:col-span-2 flex flex-row flex-wrap lg:flex-col items-start lg:items-end gap-x-6 gap-y-3">
+            <a href="https://proximity-bernardo.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn">
+              <span>VER ONLINE</span>
+              <span class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-[#B82E28]">↗</span>
+            </a>
+            <a href="https://github.com/Bernardoliveira88/Proximity" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#A8A8A0] hover:text-[#B82E28] transition-all">
+              <span>CÓDIGO</span>
+            </a>
+            <button
+              onclick="openProjectModal('proximity')"
               class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn focus:outline-none"
             >
               <span>VER ESTUDO</span>
@@ -700,18 +707,21 @@
                 HEALTHTECH
               </h3>
               <p class="font-sans text-xs sm:text-sm text-[#A8A8A0] font-medium mt-0.5">
-                Plataforma de gestão clínica
+                RoundLog — plataforma de gestão clínica
               </p>
             </div>
 
             <p class="text-xs sm:text-sm text-[#A8A8A0] leading-relaxed">
-              Backend para gestão clínica hospitalar, com suporte a consultas, prontuários, fluxos de enfermagem, passagens de plantão, comunicação com familiares e análises operacionais.
+              API e painel web para gestão clínica hospitalar: visitas médicas com áudio processado por IA, prontuários, dashboard de enfermagem, passagens de plantão, portal para familiares e análises operacionais.
             </p>
 
             <!-- Tags -->
             <div class="flex flex-wrap gap-2 pt-1">
               <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
                 Node.js
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Next.js
               </span>
               <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
                 TypeScript
@@ -728,10 +738,16 @@
             </div>
           </div>
 
-          <!-- Link / Botão 'VER ESTUDO ↗' à Direita -->
-          <div class="lg:col-span-2 flex justify-start lg:justify-end">
-            <button 
-              onclick="openProjectModal('healthtech')" 
+          <!-- Links: Código e Estudo à Direita -->
+          <div class="lg:col-span-2 flex flex-row flex-wrap lg:flex-col items-start lg:items-end gap-x-6 gap-y-3">
+            <a href="https://github.com/Bernardoliveira88/Healthtech-api" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#A8A8A0] hover:text-[#B82E28] transition-all">
+              <span>CÓDIGO API</span>
+            </a>
+            <a href="https://github.com/Bernardoliveira88/Healthtech-web" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#A8A8A0] hover:text-[#B82E28] transition-all">
+              <span>CÓDIGO WEB</span>
+            </a>
+            <button
+              onclick="openProjectModal('healthtech')"
               class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn focus:outline-none"
             >
               <span>VER ESTUDO</span>
@@ -806,10 +822,106 @@
             </div>
           </div>
 
-          <!-- Link / Botão 'VER ESTUDO ↗' à Direita -->
-          <div class="lg:col-span-2 flex justify-start lg:justify-end">
-            <button 
-              onclick="openProjectModal('gracon')" 
+          <!-- Links: Demo, Código e Estudo à Direita -->
+          <div class="lg:col-span-2 flex flex-row flex-wrap lg:flex-col items-start lg:items-end gap-x-6 gap-y-3">
+            <a href="https://nexus-doc-web-ten.vercel.app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn">
+              <span>VER ONLINE</span>
+              <span class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-[#B82E28]">↗</span>
+            </a>
+            <a href="https://github.com/Bernardoliveira88/Gracon-api" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#A8A8A0] hover:text-[#B82E28] transition-all">
+              <span>CÓDIGO</span>
+            </a>
+            <button
+              onclick="openProjectModal('gracon')"
+              class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn focus:outline-none"
+            >
+              <span>VER ESTUDO</span>
+              <span class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-[#B82E28]">↗</span>
+            </button>
+          </div>
+
+        </article>
+
+        <!-- ======================================== -->
+        <!-- PROJETO 04: SEAMONEY                     -->
+        <!-- ======================================== -->
+        <article class="py-8 sm:py-10 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center group transition-colors duration-200 hover:bg-white/[0.015] px-2 sm:px-4 -mx-2 sm:-mx-4 rounded-sm">
+
+          <!-- Número em Vermelho -->
+          <div class="lg:col-span-1">
+            <span class="font-mono font-bold text-lg sm:text-xl text-[#B82E28]">
+              04
+            </span>
+          </div>
+
+          <!-- Thumbnail Minimalista Abstrato em SVG (Fatura -> Pagamento Conciliado) -->
+          <div class="lg:col-span-3">
+            <div class="w-full h-32 sm:h-36 bg-[#141718] border border-[#ECE6DB]/10 relative overflow-hidden flex items-center justify-center p-3">
+              <svg class="w-full h-full" viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <!-- Fatura -->
+                <rect x="28" y="22" width="44" height="56" stroke="#ECE6DB" stroke-opacity="0.35" stroke-width="1"/>
+                <line x1="36" y1="36" x2="64" y2="36" stroke="#ECE6DB" stroke-opacity="0.3" stroke-width="2"/>
+                <line x1="36" y1="48" x2="58" y2="48" stroke="#ECE6DB" stroke-opacity="0.2" stroke-width="2"/>
+                <line x1="36" y1="60" x2="62" y2="60" stroke="#ECE6DB" stroke-opacity="0.25" stroke-width="2"/>
+
+                <!-- Fluxo de Pagamento -->
+                <line x1="82" y1="50" x2="128" y2="50" stroke="#ECE6DB" stroke-opacity="0.15" stroke-dasharray="3 4" stroke-width="1.5"/>
+                <path d="M122,44 L130,50 L122,56" stroke="#ECE6DB" stroke-opacity="0.4" stroke-width="1.5" fill="none"/>
+
+                <!-- Moeda Conciliada em Vermelho -->
+                <circle cx="155" cy="50" r="18" stroke="#B82E28" stroke-width="3.5"/>
+                <path d="M147,50 L153,56 L164,44" stroke="#ECE6DB" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span class="absolute bottom-1.5 left-2 font-mono text-[9px] text-[#A8A8A0]/60 tracking-wider">SM / STABLECOIN RECON</span>
+            </div>
+          </div>
+
+          <!-- Conteúdo Central: Título, Badge, Descrição e Tags -->
+          <div class="lg:col-span-6 space-y-3">
+            <div class="flex flex-wrap items-center gap-3">
+              <h3 class="font-sans font-bold text-xl sm:text-2xl text-[#ECE6DB] tracking-tight">
+                SEAMONEY
+              </h3>
+              <span class="inline-block border border-[#B82E28] px-2.5 py-0.5 text-[10px] font-mono tracking-wider text-[#B82E28] uppercase font-semibold">
+                PROTÓTIPO · HACKATHON
+              </span>
+            </div>
+
+            <p class="text-xs sm:text-sm text-[#A8A8A0] leading-relaxed">
+              Protótipo para pequenos importadores brasileiros: gestão de faturas de fornecedores, estimativa de custos, pagamentos com stablecoins em testnet e conciliação automática. Desenvolvido em equipe para o Crypto World's Fair 2026.
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 pt-1">
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Next.js
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Java
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Python
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                PostgreSQL
+              </span>
+              <span class="px-3 py-1 rounded-full border border-[#ECE6DB]/15 text-xs font-mono text-[#ECE6DB]/90 bg-white/[0.02]">
+                Blockchain
+              </span>
+            </div>
+          </div>
+
+          <!-- Links: Demo, Código e Estudo à Direita -->
+          <div class="lg:col-span-2 flex flex-row flex-wrap lg:flex-col items-start lg:items-end gap-x-6 gap-y-3">
+            <a href="https://seamoney-bernardo.vercel.app/app" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn">
+              <span>VER ONLINE</span>
+              <span class="group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5 transition-transform text-[#B82E28]">↗</span>
+            </a>
+            <a href="https://github.com/Bernardoliveira88/Seamoney" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#A8A8A0] hover:text-[#B82E28] transition-all">
+              <span>CÓDIGO</span>
+            </a>
+            <button
+              onclick="openProjectModal('seamoney')"
               class="inline-flex items-center gap-1.5 text-xs sm:text-sm font-mono font-medium tracking-wider text-[#ECE6DB] hover:text-[#B82E28] transition-all group/btn focus:outline-none"
             >
               <span>VER ESTUDO</span>
@@ -1000,6 +1112,11 @@
         </div>
       </div>
 
+      <!-- Links do Projeto -->
+      <div id="modalLinks" class="flex flex-wrap gap-x-6 gap-y-2">
+        <!-- Injetado dinamicamente via JS -->
+      </div>
+
       <!-- Rodapé do Modal -->
       <div class="pt-4 border-t border-[#ECE6DB]/10 flex justify-between items-center text-xs font-mono text-[#A8A8A0]">
         <span id="modalNote" class="text-[11px] text-[#A8A8A0]/70">
@@ -1058,10 +1175,14 @@
           },
           {
             title: 'Arquitetura e Resiliência',
-            text: 'Estruturado com Next.js, Node.js e Gemini API, com mecanismo de busca determinística de contingência caso os serviços externos de IA estejam indisponíveis.'
+            text: 'Construído com React e TanStack Start, com funções de servidor preparadas para o Google Gemini e busca determinística (normalização, intenções e detecção de ambiguidade) como contingência quando a IA está indisponível.'
           }
         ],
-        stack: ['Next.js', 'Node.js', 'TypeScript', 'Google Gemini', 'Vitest', 'APIs públicas'],
+        stack: ['React', 'TanStack Start', 'TypeScript', 'Tailwind CSS', 'Google Gemini', 'Vitest'],
+        links: [
+          { label: 'Ver online', href: 'https://proximity-bernardo.vercel.app' },
+          { label: 'Código', href: 'https://github.com/Bernardoliveira88/Proximity' }
+        ],
         note: 'Projeto premiado/concluído no NAUFest Challenge #AIForImpact (JA Americas x HP).'
       },
       healthtech: {
@@ -1082,7 +1203,11 @@
             text: 'Modelagem relacional segura com PostgreSQL e Prisma ORM, autenticação baseada em JWT e validação estrita de esquemas com Zod.'
           }
         ],
-        stack: ['Node.js', 'TypeScript', 'Fastify', 'Prisma', 'PostgreSQL', 'Redis', 'BullMQ', 'Docker', 'Google Gemini', 'Zod'],
+        stack: ['Node.js', 'TypeScript', 'Fastify', 'Prisma', 'PostgreSQL', 'Redis', 'BullMQ', 'Docker', 'Google Gemini', 'Zod', 'Next.js', 'React Query', 'PWA'],
+        links: [
+          { label: 'Código API', href: 'https://github.com/Bernardoliveira88/Healthtech-api' },
+          { label: 'Código Web', href: 'https://github.com/Bernardoliveira88/Healthtech-web' }
+        ],
         note: 'Arquitetura focada em escalabilidade horizontal e resiliência hospitalar.'
       },
       gracon: {
@@ -1104,7 +1229,37 @@
           }
         ],
         stack: ['Node.js', 'TypeScript', 'Fastify', 'Prisma', 'PostgreSQL', 'pgvector', 'Google Gemini', 'Zod', 'Resend', 'Vitest', 'Docker'],
+        links: [
+          { label: 'Ver online', href: 'https://nexus-doc-web-ten.vercel.app' },
+          { label: 'Código API', href: 'https://github.com/Bernardoliveira88/Gracon-api' },
+          { label: 'Código Web', href: 'https://github.com/Bernardoliveira88/nexusDoc-Web' }
+        ],
         note: 'Construído como MVP com validação de busca semântica vetorial.'
+      },
+      seamoney: {
+        title: 'SEAMONEY',
+        category: 'PROTÓTIPO · CRYPTO WORLD\'S FAIR 2026',
+        summary: 'Protótipo para pequenos e médios importadores brasileiros gerenciarem faturas de fornecedores, estimarem custos de pagamento e conciliarem pagamentos em stablecoins na testnet.',
+        details: [
+          {
+            title: 'O Problema',
+            text: 'Importadores precisam relacionar pagamentos internacionais a faturas, acompanhar o status de cada pagamento e organizar registros para a contabilidade.'
+          },
+          {
+            title: 'Fluxo do MVP',
+            text: 'Calculadora de custos com premissas editáveis, leitura de faturas assistida por IA, ordem de pagamento, cotação de câmbio simulada, pagamento em testnet com a referência da ordem no memo e conciliação automática.'
+          },
+          {
+            title: 'Arquitetura',
+            text: 'Front-end em Next.js, API de regras em Java com PostgreSQL e serviço de blockchain em Python, orquestrados com Docker Compose. A demo online roda em modo offline, com dados fictícios e pagamentos simulados.'
+          }
+        ],
+        stack: ['Next.js', 'TypeScript', 'Java', 'Python', 'PostgreSQL', 'Docker', 'Stablecoins', 'Testnet'],
+        links: [
+          { label: 'Ver online', href: 'https://seamoney-bernardo.vercel.app/app' },
+          { label: 'Código', href: 'https://github.com/Bernardoliveira88/Seamoney' }
+        ],
+        note: 'Projeto em equipe. Economia de custos e aceitação por fornecedores ainda são hipóteses a validar.'
       }
     };
 
@@ -1220,6 +1375,21 @@
         badge.textContent = tech;
         stackContainer.appendChild(badge);
       });
+
+      // Monta links (demo e repositórios)
+      const linksContainer = document.getElementById('modalLinks');
+      linksContainer.innerHTML = '';
+      (proj.links || []).forEach(link => {
+        const a = document.createElement('a');
+        a.href = link.href;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        a.className = 'inline-flex items-center gap-1.5 text-xs font-mono font-medium tracking-wider uppercase text-[#ECE6DB] hover:text-[#B82E28] transition-colors';
+        a.innerHTML = `<span></span><span class="text-[#B82E28]">↗</span>`;
+        a.firstChild.textContent = link.label;
+        linksContainer.appendChild(a);
+      });
+      linksContainer.classList.toggle('hidden', !proj.links?.length);
 
       projectModal.showModal();
     }

@@ -10,24 +10,32 @@ Site estático, responsivo e sem etapa de build. Foi montado com HTML, CSS e Jav
 
 ## Publicar
 
-Qualquer hospedagem de sites estáticos funciona. Uma opção simples é criar um repositório no GitHub, enviar o conteúdo desta pasta e ativar o GitHub Pages para a branch principal e a pasta raiz. Também é possível enviar a pasta descompactada a um serviço de hospedagem estática.
+O site está publicado na Vercel (projeto `bernardo-portfolio`, time nexustech3): cada push na `main` atualiza https://bernardoliveira88.vercel.app (endereço principal, também acessível por https://bernardo-portfolio-nine.vercel.app) e cada branch ganha uma prévia própria.
 
 ## Arquivos principais
 
-- `index.html` — conteúdo e estrutura.
-- `styles.css` — identidade visual, layout responsivo e estados de interação.
-- `script.js` — menu mobile, navegação ativa, filtros e janelas de detalhes dos projetos.
+- `index.html` — conteúdo, estilos (Tailwind via CDN + bloco `<style>`) e o script de navegação, menu mobile e janelas de estudo de caso.
 - `assets/retrato-bernardo.webp` — retrato preparado para o site.
-- `assets/Curriculo_Bernardo_Oliveira.pdf` — versão PDF do currículo original.
+- `assets/Curriculo_Bernardo_Oliveira.pdf` — currículo em português.
+- `assets/Resume_Bernardo_Oliveira_EN.pdf` — currículo em inglês.
+
+## Projetos e demos
+
+| Projeto | Demo | Observação |
+|---|---|---|
+| Proximity | https://proximity-bernardo.vercel.app | Busca por regras; com `GEMINI_API_KEY` no projeto da Vercel passa a usar IA. |
+| HealthTech (RoundLog) | https://healthtech-bernardo.vercel.app | Modo demo do front-end (`NEXT_PUBLIC_DEMO_MODE=true`), branch `feat/demo-mode` do Healthtech-web. |
+| Gracon (NexusDoc) | https://nexus-doc-web-ten.vercel.app | Deploy mantido pela equipe. |
+| Seamoney | https://seamoney-bernardo.vercel.app/app | Demo offline, branch `fix/next-security-upgrade` do fork. |
+| Sistema de Votação | — | Projeto acadêmico de hardware (Tinkercad). |
 
 ## Observações sobre o conteúdo
 
-- O Proximity está identificado como **protótipo em desenvolvimento**; a descrição não promete cobertura nacional nem serviços confirmados.
-- HealthTech e Gracon foram descritos com base no currículo fornecido.
-- Os cards dos projetos abrem detalhes dentro do próprio site porque não foram fornecidas URLs públicas específicas para cada projeto.
-- O telefone não foi colocado diretamente na página pública; o currículo para download mantém os dados do documento original. O contato direto está disponível por e-mail, GitHub e LinkedIn.
-- A lista de tecnologias não é apresentada como escala de proficiência. Python aparece como conhecimento em aprendizado, conforme o currículo.
+- Textos baseados no currículo de Out/2026 e no README do perfil do GitHub.
+- Cada projeto informa se é individual ou em equipe e qual foi a atuação do Bernardo.
+- O telefone não foi colocado diretamente na página pública; ele aparece apenas nos PDFs do currículo.
+- A lista de tecnologias não é apresentada como escala de proficiência. Python aparece como conhecimento em aprendizado.
 
 ## Personalização rápida
 
-Edite os textos em `index.html`. Para atualizar o conteúdo dos modais, edite o objeto `projects` em `script.js`. As cores principais ficam no início de `styles.css` nas variáveis `--bg`, `--text` e `--red`.
+Edite os textos em `index.html`. O conteúdo das janelas de estudo de caso fica no objeto `projectsData`, no script ao final do arquivo. As cores principais ficam no início do arquivo, em `tailwind.config` e nas variáveis `--bg`, `--text` e `--accent`.

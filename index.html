@@ -276,6 +276,17 @@
             </a>
           </div>
 
+          <!-- Destaque: Arena Universitária (leva ao bloco completo em Sobre) -->
+          <a href="#sobre" onclick="goToArena(); return false;" aria-label="3º lugar nacional na Arena Universitária — ver detalhes" class="group flex items-center gap-4 sm:gap-5 w-full max-w-xl mb-9 border border-[#ECE6DB]/10 border-l-2 border-l-[#B82E28] bg-white/[0.02] hover:bg-white/[0.045] hover:border-[#ECE6DB]/25 hover:border-l-[#B82E28] px-4 sm:px-5 py-4 transition-colors duration-200 focus:outline-none focus-visible:ring-1 focus-visible:ring-[#B82E28]">
+            <span class="font-serif font-black text-5xl sm:text-6xl text-[#B82E28] leading-none flex-shrink-0" aria-hidden="true">3º</span>
+            <span class="flex flex-col min-w-0">
+              <span class="font-mono text-[10px] tracking-widest text-[#B82E28] uppercase font-semibold mb-1">DESTAQUE · SET/2026</span>
+              <span class="font-sans font-bold text-sm sm:text-base text-[#ECE6DB] leading-snug">3º lugar nacional na Arena Universitária</span>
+              <span class="text-xs text-[#A8A8A0] mt-0.5">1º lugar estadual · programa de 40h</span>
+            </span>
+            <span class="ml-auto pl-2 font-mono text-sm text-[#B82E28] group-hover:translate-x-1 transition-transform flex-shrink-0" aria-hidden="true">-></span>
+          </a>
+
           <!-- Indicadores de Status -->
           <div class="flex flex-wrap items-center gap-6 text-xs font-mono text-[#A8A8A0]">
             <div class="flex items-center gap-2">
@@ -476,6 +487,51 @@
 
       </div>
 
+      <!-- Destaque: Arena Universitária — 3º lugar nacional -->
+      <div id="destaque-arena" class="scroll-mt-28 sm:scroll-mt-32 mb-16 lg:mb-20 border border-[#ECE6DB]/10 border-l-4 border-l-[#B82E28] bg-white/[0.02]">
+        <div class="grid grid-cols-1 lg:grid-cols-12">
+
+          <!-- Colocação em tipografia editorial -->
+          <div class="lg:col-span-4 flex items-center gap-5 p-6 sm:p-8 border-b lg:border-b-0 lg:border-r border-[#ECE6DB]/10">
+            <span class="font-serif font-black text-7xl sm:text-8xl text-[#B82E28] leading-none" aria-hidden="true">3º</span>
+            <div>
+              <p class="font-mono text-[10px] tracking-widest text-[#A8A8A0] uppercase mb-1">LUGAR NACIONAL</p>
+              <p class="font-sans font-extrabold text-lg sm:text-xl text-[#ECE6DB] leading-tight tracking-tight">Arena<br>Universitária</p>
+              <p class="font-mono text-[10px] tracking-wider text-[#A8A8A0]/80 uppercase mt-2">Set/2026</p>
+            </div>
+          </div>
+
+          <!-- Narrativa e números -->
+          <div class="lg:col-span-8 p-6 sm:p-8">
+            <p class="font-mono text-xs font-semibold tracking-super-wide text-[#B82E28] uppercase mb-3">
+              EXPERIÊNCIA EM DESTAQUE
+            </p>
+            <h3 class="font-sans text-2xl sm:text-3xl font-extrabold tracking-tight text-[#ECE6DB] leading-tight mb-3">
+              A experiência mais valiosa da minha trajetória até aqui.
+            </h3>
+            <p class="text-sm sm:text-base text-[#A8A8A0] leading-relaxed max-w-2xl">
+              Pódio nacional na Arena Universitária, depois de conquistar o 1º lugar estadual. Um programa de 40h em liderança, trabalho em equipe, pensamento crítico e tomada de decisão.
+            </p>
+
+            <dl class="mt-6 pt-6 border-t border-[#ECE6DB]/10 grid grid-cols-3 gap-4 sm:gap-6">
+              <div>
+                <dt class="font-mono text-[10px] tracking-widest text-[#B82E28] uppercase mb-1">NACIONAL</dt>
+                <dd class="font-sans font-bold text-base sm:text-lg text-[#ECE6DB]">3º lugar</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[10px] tracking-widest text-[#B82E28] uppercase mb-1">ESTADUAL</dt>
+                <dd class="font-sans font-bold text-base sm:text-lg text-[#ECE6DB]">1º lugar</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-[10px] tracking-widest text-[#B82E28] uppercase mb-1">PROGRAMA</dt>
+                <dd class="font-sans font-bold text-base sm:text-lg text-[#ECE6DB]">40 horas</dd>
+              </div>
+            </dl>
+          </div>
+
+        </div>
+      </div>
+
       <!-- Parte Inferior (02 / HABILIDADES) -->
       <div class="border-t border-[#ECE6DB]/10 pt-12 sm:pt-16">
         <p class="font-mono text-xs font-semibold tracking-super-wide text-[#B82E28] uppercase mb-2">
@@ -600,12 +656,7 @@
               HACKATHONS · COMPETIÇÕES
             </span>
           </div>
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs text-[#A8A8A0] leading-relaxed">
-            <div>
-              <p class="text-sm font-bold text-[#ECE6DB] mb-0.5">Arena Universitária — 3º lugar nacional</p>
-              <p class="font-mono text-[10px] tracking-wider text-[#A8A8A0]/80 uppercase mb-1">Set/2026 · 1º lugar estadual</p>
-              <p>Programa de 40h em liderança, trabalho em equipe, pensamento crítico e tomada de decisão.</p>
-            </div>
+          <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 text-xs text-[#A8A8A0] leading-relaxed">
             <div>
               <p class="text-sm font-bold text-[#ECE6DB] mb-0.5">NAUFest #AIForImpact (JA Americas × HP)</p>
               <p class="font-mono text-[10px] tracking-wider text-[#A8A8A0]/80 uppercase mb-1">Out/2026 · Challenge concluído</p>
@@ -1514,6 +1565,14 @@
 
       // 6. Rola suavemente para o topo se estiver distante
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Abre a aba Sobre já posicionada no destaque da Arena Universitária
+    function goToArena() {
+      switchTab('sobre');
+      requestAnimationFrame(() => {
+        document.getElementById('destaque-arena')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
     }
 
     // Controle do Menu Mobile
